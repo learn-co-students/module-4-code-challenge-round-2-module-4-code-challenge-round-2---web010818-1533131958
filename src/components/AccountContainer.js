@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import TransactionsList from './TransactionsList'
 import Search from './Search'
-import {transactions} from '../transactionsData'
+// import {transactions} from '../transactionsData'
 
 class AccountContainer extends Component {
 
@@ -35,7 +35,6 @@ class AccountContainer extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div>
         <Search handleChange={this.handleChange} />
