@@ -22,8 +22,8 @@ class AccountContainer extends Component {
 
     return (
       <div>
-        <Search />
-        <TransactionsList />
+        <Search handleOnChange={this.props.handleOnChange}/>
+        <TransactionsList transactions={this.props.transactions} filterTransaction={this.props.filterTransaction}/>
       </div>
     )
   }
