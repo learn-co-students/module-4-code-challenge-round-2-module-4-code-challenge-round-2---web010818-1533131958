@@ -1,7 +1,15 @@
 import React from 'react'
+import Transaction from './Transaction'
 
-const TransactionsList = () => {
+const TransactionsList = (props) => {
 
+
+  const handleTransactions = () => {
+    // going to add a conditional here to see if theres anything in the filterTransaction array. if there is, map over filterTransaction
+    return props.transactions.map((transaction)=>{
+      return <Transaction transaction={transaction} key={transaction.id}/>
+    })
+  }
   return (
     <table className="ui celled striped padded table">
       <tbody>
@@ -28,7 +36,7 @@ const TransactionsList = () => {
           </th>
         </tr>
 
-        {"... your code here..."}
+        {handleTransactions()}
 
       </tbody>
     </table>
